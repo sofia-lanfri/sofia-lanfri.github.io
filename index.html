@@ -88,16 +88,26 @@
 					<!--	<p>....</p>-->
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="https://formspree.io/f/mqknkkpo">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+								<form name="contact" method="POST" action="https://formspree.io/f/mqknkkpo">
+									<div class="form-group form-inline">
+									  <label class="sr-only" for="inputName">Name</label>
+									  <input type="text" name="name" class="form-control w-100" id="inputName" placeholder="Name" required>
 									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
+									<div class="form-group form-inline">
+									  <label class="sr-only" for="inputEmail">Email</label>
+									  <input type="email" name="email" class="form-control w-100" id="inputEmail" placeholder="Email" required>
+									</div>
+									<div class="form-group">
+									  <label class="sr-only" for="inputMessage">Message</label>
+									  <textarea name="message" class="form-control" id="inputMessage" rows="5" placeholder="Message" required></textarea>
+									</div>
+								<!--	<button type="submit" class="btn btn-outline-primary px-3 py-2">Send</button> -->
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" /></li>
+									</ul>
+
+								  </form>
+								
 							</div>
 							<div class="col-4 col-12-small">
 								<ul class="labeled-icons">
